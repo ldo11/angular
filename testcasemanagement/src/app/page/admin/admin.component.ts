@@ -13,6 +13,7 @@ export class AdminComponent implements OnInit {
 
   ngOnInit(): void {
     this.adminService.getalluser().then((Users: Array<User>) => {
+      console.dir(Users);
       this.users = Users;
     })
   }

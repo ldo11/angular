@@ -1,9 +1,9 @@
 import {Media} from './media';
 
 export class User {
-  id: number;
+  _id: number;
+  name: string;
   email: string;
-  password: string;
   role: string;
   status: string;
   avatar: Media;
