@@ -47,7 +47,7 @@ addteststep(teststepname){
 }
 
 
-addteststep(teststepid){
+updateteststep(teststepid){
   const url = 'design/updatestep';
   const body = {teststepid: teststepid};
   return this.httpService.sendGetRequest(url,body);
