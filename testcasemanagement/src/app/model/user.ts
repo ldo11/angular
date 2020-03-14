@@ -2,12 +2,9 @@ import {Media} from './media';
 
 export class User {
   id: number;
-  username: string;
-  firstName: string;
-  lastName: string;
-  display: string;
   email: string;
   password: string;
+  role: string;
   status: string;
   avatar: Media;
   constructor() {

@@ -18,8 +18,8 @@ export class HttpService {
   }
 
   unAuthenAccessEvent: EventEmitter<any> = new EventEmitter();
-  baseUrl = 'http://localhost:3000/';
-  // baseUrl = '';
+  // baseUrl = 'http://localhost:3000/';
+   baseUrl = '';
 
   sendGetRequest(url, reqParams) {
 
