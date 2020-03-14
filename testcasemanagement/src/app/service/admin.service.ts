@@ -12,7 +12,6 @@ export class AdminService {
 
   }
   getalluser(){
-    console.log("call service")
     const url = 'admin/alluser';
     return this.httpService.sendGetRequest(url,{});
   }
