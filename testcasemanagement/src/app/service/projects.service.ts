@@ -20,7 +20,7 @@ addproject(name){
 }
 
 
-findprojectbyid(id){
+findprojectbyid(projectid){
   const url = 'project/projectbyid';
   const body = {};
   return this.httpService.sendGetRequest(url,body);
