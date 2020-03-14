@@ -13,28 +13,28 @@ export class ProjectsService {
 }
 
 
-addproject(){
+addproject(name){
   const url = 'project';
-  const body = {id: id};
-  return this.httpService.sendGetRequest(url,body);
+  const body = {name: name};
+  return this.httpService.sendPostRequest(url,body);
 }
 
 
 findprojectbyid(id){
   const url = 'project/projectbyid';
-  const body = {id: id};
+  const body = {};
   return this.httpService.sendGetRequest(url,body);
 }
 
 addtester(projectname){
   const url = 'project/addtester';
   const body = {projectname: projectname};
-  return this.httpService.sendGetRequest(url,body);
+  return this.httpService.sendPostRequest(url,body);
 }
 
 findalltesters(projectname){
   const url = 'project/alltesters';
-  const body = {projectname: projectname};
+  const body = {};
   return this.httpService.sendGetRequest(url,body);
 }
 

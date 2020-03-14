@@ -15,42 +15,42 @@ export class DesignService {
 
 findprojectbyname(projectname){
   const url = 'design/p';
-  const body = {projectname: projectname};
+  const body = {};
   return this.httpService.sendGetRequest(url,body);
 }
 
 
 findtestcasebyname(tcname){
   const url = 'design/n';
-  const body = {tcname: tcname};
+  const body = {};
   return this.httpService.sendGetRequest(url,body);
 }
 
 
-addtestcase(){
+addtestcase(testcasedetail){
   const url = 'design';
-  const body = {tc:tc};
-  return this.httpService.sendGetRequest(url,body);
+  const body = {testcasedetail:testcasedetail};
+  return this.httpService.sendPostRequest(url,body);
 }
 
 
 updatetestcase(tcname){
   const url = 'design/update';
   const body = {tcname: tcname};
-  return this.httpService.sendGetRequest(url,body);
+  return this.httpService.sendPostRequest(url,body);
 }
 
 addteststep(teststepname){
   const url = 'design/addstep';
   const body = {teststepname: teststepname};
-  return this.httpService.sendGetRequest(url,body);
+  return this.httpService.sendPostRequest(url,body);
 }
 
 
 updateteststep(teststepid){
   const url = 'design/updatestep';
   const body = {teststepid: teststepid};
-  return this.httpService.sendGetRequest(url,body);
+  return this.httpService.sendPostRequest(url,body);
 }
 
 
