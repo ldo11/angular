@@ -33,7 +33,7 @@ addtester(projectname){
 }
 
 findalltesters(projectname){
-  const url = 'project/alltesters'+projectname;
+  const url = 'project/alltesters/' + projectname;
   const body = {};
   return this.httpService.sendGetRequest(url,body);
 }
