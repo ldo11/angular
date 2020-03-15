@@ -16,16 +16,16 @@ export class ExecutionService {
   }
 
   getExecutionId(id){
-    const url = 'execution/:id';
+    const url = 'execution/'+id;
     const body = {};
     return this.httpService.sendGetRequest(url,body);
   }
 
   getExecutionTestcase(testcase){
-    const url = 'execution/:testcase';
+    const url = 'execution/'+testcase;
     const body = {};
     return this.httpService.sendGetRequest(url,body);
   }
 
-  
+
 }
