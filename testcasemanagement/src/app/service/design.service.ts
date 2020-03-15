@@ -14,14 +14,14 @@ export class DesignService {
 
 
 findprojectbyname(projectname){
-  const url = 'design/p';
+  const url = 'design/p'+projectname;
   const body = {};
   return this.httpService.sendGetRequest(url,body);
 }
 
 
 findtestcasebyname(tcname){
-  const url = 'design/n';
+  const url = 'design/n'+tcname;
   const body = {};
   return this.httpService.sendGetRequest(url,body);
 }
