@@ -27,5 +27,10 @@ export class ExecutionService {
     return this.httpService.sendGetRequest(url,body);
   }
 
+  postExecution(tc_name,tester,tc_ver,build_number,results){
+    const url = 'execution/';
+    const body = {tc_name:tc_name, tester:tester, tc_ver:tc_ver, build_number:build_number, results:results};
+    return this.httpService.sendPostRequest(url,body);
+  }
 
 }
