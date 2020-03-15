@@ -7,5 +7,12 @@ import {HttpService} from './http.service';
 })
 export class ExecutionService {
 
-  constructor() { }
+  constructor(private logger: LogService,private httpService: HttpService) { }
+
+  getAllEx(){
+    const url = 'execution/allex';
+    return this.httpService.sendGetRequest(url,{});
+  }
+
+
 }
