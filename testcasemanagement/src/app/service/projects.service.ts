@@ -28,7 +28,7 @@ findprojectbyid(projectid){
 
 addtester(projectname){
   const url = 'project/addtester';
-  const body = {projectname: projectname};
+  const body = {name: projectname};
   return this.httpService.sendPostRequest(url,body);
 }
 
