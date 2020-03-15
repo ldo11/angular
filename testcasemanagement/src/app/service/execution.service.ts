@@ -11,8 +11,21 @@ export class ExecutionService {
 
   getAllEx(){
     const url = 'execution/allex';
-    return this.httpService.sendGetRequest(url,{});
+    const body = {};
+    return this.httpService.sendGetRequest(url,body);
   }
 
+  getExecutionId(id){
+    const url = 'execution/:id';
+    const body = {};
+    return this.httpService.sendGetRequest(url,body);
+  }
 
+  getExecutionTestcase(testcase){
+    const url = 'execution/:testcase';
+    const body = {};
+    return this.httpService.sendGetRequest(url,body);
+  }
+
+  
 }
