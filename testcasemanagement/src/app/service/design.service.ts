@@ -29,34 +29,32 @@ findtestcasebyname(tcname){
 
 addtestcase(testcasedetail){
   const url = 'design';
-  const body = {testcasedetail:testcasedetail};
+  return this.httpService.sendPostRequest(url,testcasedetail);
+}
+
+
+updatetestcase(name,body){
+  const url = 'design/update/'+name;
+  return this.httpService.sendPostRequest(url,body);
+}
+
+addteststep(name,body){
+  const url = 'design/addstep/'+name;
   return this.httpService.sendPostRequest(url,body);
 }
 
 
-updatetestcase(tcname){
-  const url = 'design/update';
-  const body = {tcname: tcname};
-  return this.httpService.sendPostRequest(url,body);
-}
-
-addteststep(teststepname){
-  const url = 'design/addstep';
-  const body = {teststepname: teststepname};
-  return this.httpService.sendPostRequest(url,body);
-}
-
-
-updateteststep(teststepid){
-  const url = 'design/updatestep';
-  const body = {teststepid: teststepid};
+updateteststep(id,action,expected){
+  const url = 'design/updatestep/'+id;
+  const body = {action: action,
+  expected: expected};
   return this.httpService.sendPostRequest(url,body);
 }
 
 
 }
 
- 
+
 
 
 
