@@ -21,7 +21,7 @@ addproject(name){
 
 
 findprojectbyid(projectid){
-  const url = 'project/projectbyid';
+  const url = 'project/' + projectid;
   const body = {};
   return this.httpService.sendGetRequest(url,body);
 }
@@ -33,7 +33,7 @@ addtester(projectname){
 }
 
 findalltesters(projectname){
-  const url = 'project/alltesters';
+  const url = 'project/alltesters'+projectname;
   const body = {};
   return this.httpService.sendGetRequest(url,body);
 }
